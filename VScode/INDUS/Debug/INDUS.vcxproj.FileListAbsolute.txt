@@ -1,0 +1,5 @@
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\INDUS\Debug\INDUS.exe
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\INDUS\Debug\INDUS.pdb
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\INDUS\Debug\INDUS.vcxproj.MdMergeInputs.cache
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\INDUS\Debug\INDUS.vcxproj.cppwinrt_plat.cache
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\INDUS\Debug\INDUS.vcxproj.cppwinrt_comp.cache

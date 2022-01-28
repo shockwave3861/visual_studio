@@ -1,0 +1,26 @@
+﻿  read.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\examples\read.c(40,10): fatal error C1083: Cannot open include file: 'include/Protocol.h': No such file or directory
+  COMPort_Unix.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\COMPort_Unix.c(27,10): fatal error C1083: Cannot open include file: 'COMPort.h': No such file or directory
+  COMPort_Windows.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\COMPort_Windows.c(27,10): fatal error C1083: Cannot open include file: 'COMPort.h': No such file or directory
+  EndpointCalibration.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\EndpointCalibration.c(27,10): fatal error C1083: Cannot open include file: 'EndpointCalibration.h': No such file or directory
+  EndpointRadarAdcxmc.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\EndpointRadarAdcxmc.c(27,10): fatal error C1083: Cannot open include file: 'EndpointRadarADCXMC.h': No such file or directory
+  EndpointRadarBase.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\EndpointRadarBase.c(27,10): fatal error C1083: Cannot open include file: 'EndpointRadarBase.h': No such file or directory
+  EndpointRadarDoppler.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\EndpointRadarDoppler.c(27,10): fatal error C1083: Cannot open include file: 'EndpointRadarDoppler.h': No such file or directory
+  EndpointRadarErrorCodes.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\EndpointRadarErrorCodes.c(27,10): fatal error C1083: Cannot open include file: 'EndpointRadarErrorCodes.h': No such file or directory
+  EndpointRadarFmcw.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\EndpointRadarFmcw.c(27,10): fatal error C1083: Cannot open include file: 'EndpointRadarFMCW.h': No such file or directory
+  EndpointRadarIndustrial.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\EndpointRadarIndustrial.c(27,10): fatal error C1083: Cannot open include file: 'EndpointRadarIndustrial.h': No such file or directory
+  EndpointRadarP2G.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\EndpointRadarP2G.c(28,10): fatal error C1083: Cannot open include file: 'EndpointRadarP2G.h': No such file or directory
+  EndpointTargetDetection.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\EndpointTargetDetection.c(27,10): fatal error C1083: Cannot open include file: 'EndpointTargetDetection.h': No such file or directory
+  Protocol.c
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\read_target\src\Protocol.c(31,10): fatal error C1083: Cannot open include file: 'Protocol.h': No such file or directory

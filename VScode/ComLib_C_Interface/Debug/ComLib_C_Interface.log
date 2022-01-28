@@ -1,0 +1,16 @@
+﻿  extract_raw_data.c
+  COMPort_Unix.c
+  COMPort_Windows.c
+  EndpointCalibration.c
+  EndpointRadarAdcxmc.c
+  EndpointRadarBase.c
+  EndpointRadarDoppler.c
+  EndpointRadarErrorCodes.c
+  EndpointRadarFmcw.c
+  EndpointRadarIndustrial.c
+  EndpointRadarP2G.c
+  EndpointTargetDetection.c
+D:\PROJECTS\Infeneon Position2Go Docs\IFX_P2G-HW-SW_V1.0.4\Firmware_Software\Communication Library\ComLib_C_Interface\src\EndpointTargetDetection.c(313,47): warning C4244: 'function': conversion from 'uint16_t' to 'uint8_t', possible loss of data
+  Protocol.c
+  Generating Code...
+  ComLib_C_Interface.vcxproj -> C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\ComLib_C_Interface\Debug\ComLib_C_Interface.exe
