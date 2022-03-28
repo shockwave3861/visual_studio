@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\isys5220 data structure\main.cpp(38,18): warning C4305: '=': truncation from 'double' to 'float'
+  isys5220 data structure.vcxproj -> C:\Users\MKOLTE\Documents\Visual Studio 2019\VScode\isys5220 data structure\Debug\isys5220 data structure.exe

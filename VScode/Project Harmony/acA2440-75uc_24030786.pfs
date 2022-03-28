@@ -134,7 +134,7 @@ ColorTransformationSelector	RGBtoRGB
 ColorTransformationValueSelector	Gain00
 ShutterMode	Global
 ExposureMode	Timed
-ExposureTime	30000.0
+ExposureTime	3000.0
 AcquisitionBurstFrameCount	1
 TriggerSelector	FrameBurstStart
 TriggerMode	Off
@@ -153,7 +153,7 @@ TriggerActivation	RisingEdge
 TriggerSelector	FrameStart
 TriggerDelay	0
 AcquisitionFrameRateEnable	0
-AcquisitionFrameRate	100.00000
+AcquisitionFrameRate	20.00000
 DeviceLinkSelector	0
 DeviceLinkThroughputLimitMode	On
 DeviceLinkSelector	0
@@ -228,12 +228,12 @@ LineSelector	Line4
 LineMode	Input
 LineSelector	Line1
 LineSelector	Line2
-LineSource	UserOutput1
+LineSource	ExposureActive
 LineSelector	Line1
 LineSelector	Line1
 LineInverter	0
 LineSelector	Line2
-LineInverter	0
+LineInverter	1
 LineSelector	Line3
 LineInverter	0
 LineSelector	Line4
