@@ -19,6 +19,8 @@ struct motion_zone
 	float eta = 0.0;
 };
 
+motion_zone ww;
+
 
 int main()
 {

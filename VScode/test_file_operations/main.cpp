@@ -16,18 +16,21 @@ int main() {
 			outfile.open("D:\\PROJECTS\\Project Harmony\\testhtml.htm");
 
 			if (!outfile)
+			{
 				cout << "File not found !" << endl;
-			else
-				cout << "File found successfully!" << endl;
+				break;
+			}
+			//else
+			//cout << "File found successfully!" << endl;
 
 			outfile << "<!DOCTYPE html>" << endl;
 			outfile << "<html>" << endl;
 			outfile << "<head>" << endl;
-			outfile << "<meta http-equiv=\"refresh\" content=\"0.1\">" << endl;
+			outfile << "<meta http-equiv=\"refresh\" content=\"0.2\">" << endl;
 			outfile << "</head>" << endl;
 			outfile << "<body>" << endl;
-			outfile << "<h1>" << i << "</h1>" << endl;
-			outfile << "<h1>KMPH</h1>" << endl;
+			outfile << "<p7>&nbsp&nbsp&nbsp" << i << "<br></p7>" << endl;
+			outfile << "<p7>KMPH</p7>" << endl;
 			outfile << "</body>" << endl;
 			outfile << "</html>" << endl;
 
@@ -39,7 +42,7 @@ int main() {
 
 			outfile.close();
 
-			this_thread::sleep_for(std::chrono::milliseconds(100));
+			this_thread::sleep_for(std::chrono::milliseconds(200));
 		}
 	}
 
