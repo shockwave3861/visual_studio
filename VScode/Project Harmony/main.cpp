@@ -153,7 +153,7 @@ string aca2440_grab_image(string str_speed, string str_time_stamp_as_name)
 		if (camera.GrabOne(1000, ptrGrabResult))
 		{
 			string str_output_path = str_images_path + str_images_folder;
-			cout << str_output_path << endl;
+			//cout << str_output_path << endl;
 			wstring wstr_output_path = wstring(str_output_path.begin(), str_output_path.end());
 			LPCWSTR lpcwstr_output_path = new TCHAR[str_output_path.size() + 1];
 			lpcwstr_output_path = wstr_output_path.c_str();
@@ -517,6 +517,81 @@ void create_object_list_json(object_list object, string str_time_stamp_as_name)
 	outfile.close();
 }
 
+void update_harmony_db(string str_table_name, string str_time_stamp, string str_time_stamp_as_name, object_list object)
+{
+	sqlite3* sql_db;
+	int sql_rc;
+	const char* sql_query;
+	char* sql_z_err_msg;
+
+	sql_rc = sqlite3_open("harmony.db", &sql_db);
+
+	if (sql_rc)
+	{
+		fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(sql_db));
+		//return(0);
+	}
+	else
+	{
+		//fprintf(stderr, "Opened database successfully\n");
+
+
+		string temp_query = "INSERT INTO " + str_table_name + " (TIME_STAMP, \
+																IMAGE_NAME,\
+																OBJECT_ID,\
+																AGE_COUNT,\
+																STATIC_COUNT,\
+																TRACK_QUALITY,\
+																OBJECT_CLASS,\
+																EVENT_ZONE_INDEX,\
+																DISTANCE_X,\
+																DISTANCE_Y,\
+																VELOCITY_X,\
+																VELOCITY_Y,\
+																VELOCITY_IN_DIRECTON,\
+																DIRECTION_X,\
+																DIRECTION_Y,\
+																DISTANCE_TO_FRONT,\
+																DISTANCE_TO_BACK,\
+																LENGTH_OF_OBJECT,\
+																WIDTH_OF_OBJECT)"
+			"VALUES (" + str_time_stamp + ","
+			+ str_time_stamp_as_name + ","
+			+ to_string(object.i_object_id) + ","
+			+ to_string(object.i_age_count) + ","
+			+ to_string(object.i_static_count) + ","
+			+ to_string(object.f_track_quality) + ","
+			+ to_string(object.i_object_class) + ","
+			+ to_string(object.i_event_zone_index) + ","
+			+ to_string(object.f_distance_x) + ","
+			+ to_string(object.f_distance_y) + ","
+			+ to_string(object.f_velocity_x) + ","
+			+ to_string(object.f_velocity_y) + ","
+			+ to_string(object.f_velocity_in_dir * 3.6) + ","
+			+ to_string(object.f_direction_x) + ","
+			+ to_string(object.f_direction_y) + ","
+			+ to_string(object.f_distance_to_front) + ","
+			+ to_string(object.f_distance_to_back) + ","
+			+ to_string(object.f_length) + ","
+			+ to_string(object.f_width)
+			+ ");";
+
+		sql_query = &temp_query[0];
+
+		sql_rc = sqlite3_exec(sql_db, sql_query, callback, 0, &sql_z_err_msg);
+
+		if (sql_rc != SQLITE_OK) {
+			fprintf(stderr, "SQL error: %s\n", sql_z_err_msg);
+			sqlite3_free(sql_z_err_msg);
+		}
+		else {
+			fprintf(stdout, "Records created successfully\n");
+		}
+
+		sqlite3_close(sql_db);
+	}
+}
+
 int main()//int argc, char* argv[])
 {
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -533,7 +608,8 @@ int main()//int argc, char* argv[])
 	server.sin_family = AF_INET;
 	server.sin_port = htons(62150);
 
-	float speed_limit = 10;
+	float f_min_speed = 5;
+	float f_speed_limit = 10;
 
 	sqlite3* sql_db;
 	int sql_rc;
@@ -595,6 +671,37 @@ int main()//int argc, char* argv[])
 	}
 	else {
 		fprintf(stderr, "Opened database successfully\n");
+	}
+
+	sql_query = "CREATE TABLE if NOT EXISTS VIOLATION_DATA("\
+		"TIME_STAMP				TEXT	NOT NULL,"\
+		"IMAGE_NAME				TEXT	NOT NULL,"\
+		"OBJECT_ID				INT		NOT NULL,"\
+		"AGE_COUNT				INT		NOT NULL,"\
+		"STATIC_COUNT			INT		NOT NULL,"\
+		"TRACK_QUALITY			FLOAT	NOT NULL,"\
+		"OBJECT_CLASS			FLOAT	NOT NULL,"\
+		"EVENT_ZONE_INDEX		FLOAT	NOT NULL,"\
+		"DISTANCE_X				FLOAT	NOT NULL,"\
+		"DISTANCE_Y				FLOAT	NOT NULL,"\
+		"VELOCITY_X				FLAOT	NOT NULL,"\
+		"VELOCITY_Y				FLOAT	NOT NULL,"\
+		"VELOCITY_IN_DIRECTON	FLOAT	NOT NULL,"\
+		"DIRECTION_X			FLOAT	NOT NULL,"\
+		"DIRECTION_Y			FLOAT	NOT NULL,"\
+		"DISTANCE_TO_FRONT		FLOAT	NOT NULL,"\
+		"DISTANCE_TO_BACK		FLOAT	NOT NULL,"\
+		"LENGTH_OF_OBJECT		FLOAT	NOT NULL,"\
+		"WIDTH_OF_OBJECT		FLOAT	NOT_NULL);";
+
+	sql_rc = sqlite3_exec(sql_db, sql_query, callback, 0, &sql_z_err_msg);
+
+	if (sql_rc != SQLITE_OK) {
+		fprintf(stderr, "SQL error: %s\n", sql_z_err_msg);
+		sqlite3_free(sql_z_err_msg);
+	}
+	else {
+		fprintf(stdout, "Table created successfully\n");
 	}
 
 	sql_query = "CREATE TABLE if NOT EXISTS OBJECT_LIST("\
@@ -764,11 +871,11 @@ int main()//int argc, char* argv[])
 		//}
 
 		i_no_of_objects = isys5220_get_obj_list(object);
-		//printf("********************start****************************\n");
-		//cout << "No. of objects : " << i_no_of_objects << endl;
+
 		for (int i = 0; i < i_no_of_objects; i++)
 		{
-			/*cout << "i_object_id : " << object[i].i_object_id << endl;
+			/*cout << "No. of objects : " << i_no_of_objects << endl;
+			cout << "i_object_id : " << object[i].i_object_id << endl;
 			cout << "i_age_count : " << object[i].i_age_count << endl;
 			cout << "i_static_count : " << object[i].i_static_count << endl;
 			cout << "f_track_quality : " << object[i].f_track_quality << endl;
@@ -787,7 +894,7 @@ int main()//int argc, char* argv[])
 			cout << "f_width : " << object[i].f_width << endl;
 			printf("\n");*/
 
-			if (object[i].i_event_zone_index == 0 && object[i].f_distance_y < 25 && (object[i].f_velocity_in_dir * 3.6) > 10)
+			if (object[i].i_event_zone_index == 0 && object[i].f_distance_y < 25 && (object[i].f_velocity_in_dir * 3.6) > f_min_speed)
 			{
 				time_t raw_time;
 				struct tm* time_info;
@@ -801,9 +908,19 @@ int main()//int argc, char* argv[])
 				strftime(char_time_stamp, 80, "'%G-%m-%d %H:%M:%S'", time_info);
 				string str_time_stamp(char_time_stamp);
 
-				string str_image_path = aca2440_grab_image(to_string(object[i].f_velocity_in_dir * 3.6), str_time_stamp_as_name);
+				string str_image_path;
+				if ((object[i].f_velocity_in_dir * 3.6) > f_speed_limit)
+					str_image_path = aca2440_grab_image(to_string(object[i].f_velocity_in_dir * 3.6), str_time_stamp_as_name);
 
-				sql_rc = sqlite3_open("harmony.db", &sql_db);
+				str_time_stamp_as_name.insert(0, "'");
+				str_time_stamp_as_name.append("'");
+
+				update_harmony_db("OBJECT_LIST", str_time_stamp, str_time_stamp_as_name, object[i]);
+
+				if ((object[i].f_velocity_in_dir * 3.6) > f_speed_limit)
+					update_harmony_db("VIOLATION_DATA", str_time_stamp, str_time_stamp_as_name, object[i]);
+
+				/*sql_rc = sqlite3_open("harmony.db", &sql_db);
 
 				if (sql_rc) {
 					fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(sql_db));
@@ -812,9 +929,6 @@ int main()//int argc, char* argv[])
 				else {
 					fprintf(stderr, "Opened database successfully\n");
 				}
-
-				str_time_stamp_as_name.insert(0, "'");
-				str_time_stamp_as_name.append("'");
 
 				string temp_query = "INSERT INTO OBJECT_LIST (TIME_STAMP,\
 															IMAGE_NAME,\
@@ -835,26 +949,26 @@ int main()//int argc, char* argv[])
 															DISTANCE_TO_BACK,\
 															LENGTH_OF_OBJECT,\
 															WIDTH_OF_OBJECT)"
-									"VALUES (" + str_time_stamp + ","
-												+ str_time_stamp_as_name + ","
-												+ to_string(object[i].i_object_id) + ","
-												+ to_string(object[i].i_age_count) + "," 
-												+ to_string(object[i].i_static_count) + ","
-												+ to_string(object[i].f_track_quality) + ","
-												+ to_string(object[i].i_object_class) + ","
-												+ to_string(object[i].i_event_zone_index) + ","
-												+ to_string(object[i].f_distance_x) + ","
-												+ to_string(object[i].f_distance_y) + ","
-												+ to_string(object[i].f_velocity_x) + ","
-												+ to_string(object[i].f_velocity_y) + ","
-												+ to_string(object[i].f_velocity_in_dir) + ","
-												+ to_string(object[i].f_direction_x) + ","
-												+ to_string(object[i].f_direction_y) + ","
-												+ to_string(object[i].f_distance_to_front) + ","
-												+ to_string(object[i].f_distance_to_back) + ","
-												+ to_string(object[i].f_length) + ","
-												+ to_string(object[i].f_width)
-												+ ");";
+					"VALUES (" + str_time_stamp + ","
+					+ str_time_stamp_as_name + ","
+					+ to_string(object[i].i_object_id) + ","
+					+ to_string(object[i].i_age_count) + ","
+					+ to_string(object[i].i_static_count) + ","
+					+ to_string(object[i].f_track_quality) + ","
+					+ to_string(object[i].i_object_class) + ","
+					+ to_string(object[i].i_event_zone_index) + ","
+					+ to_string(object[i].f_distance_x) + ","
+					+ to_string(object[i].f_distance_y) + ","
+					+ to_string(object[i].f_velocity_x) + ","
+					+ to_string(object[i].f_velocity_y) + ","
+					+ to_string(object[i].f_velocity_in_dir) + ","
+					+ to_string(object[i].f_direction_x) + ","
+					+ to_string(object[i].f_direction_y) + ","
+					+ to_string(object[i].f_distance_to_front) + ","
+					+ to_string(object[i].f_distance_to_back) + ","
+					+ to_string(object[i].f_length) + ","
+					+ to_string(object[i].f_width)
+					+ ");";
 
 				sql_query = &temp_query[0];
 
@@ -868,7 +982,7 @@ int main()//int argc, char* argv[])
 					fprintf(stdout, "Records created successfully\n");
 				}
 
-				sqlite3_close(sql_db);
+				sqlite3_close(sql_db);*/
 
 				create_object_list_json(object[i], str_time_stamp_as_name);
 
@@ -887,11 +1001,17 @@ int main()//int argc, char* argv[])
 					curl_mimepart* part;
 					mime = curl_mime_init(curl);
 					part = curl_mime_addpart(mime);
-					curl_mime_name(part, "file");
-					curl_mime_filedata(part, str_image_path.c_str());
-					part = curl_mime_addpart(mime);
+
 					curl_mime_name(part, "file");
 					curl_mime_filedata(part, str_object_list_json_path.c_str());
+
+					if ((object[i].f_velocity_in_dir * 3.6) > f_speed_limit)
+					{
+						part = curl_mime_addpart(mime);
+						curl_mime_name(part, "file");
+						curl_mime_filedata(part, str_image_path.c_str());
+					}
+
 					curl_easy_setopt(curl, CURLOPT_MIMEPOST, mime);
 					// If you want to set any more options, do it here, before making the request.
 
@@ -912,7 +1032,10 @@ int main()//int argc, char* argv[])
 				else {
 					std::cerr << "Error initializing curl." << std::endl;
 				}
+
+				printf("\n");
 			}
+
 
 			//outfile.open(str_html_path);
 
