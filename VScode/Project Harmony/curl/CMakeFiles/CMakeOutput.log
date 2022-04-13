@@ -1,0 +1,1180 @@
+The system is: Windows - 10.0.17134 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 06-04-2022 15:44:36.
+Project "C:\Project Harmony\curl\CMakeFiles\3.22.3\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\Project Harmony\curl\CMakeFiles\3.22.3\CompilerIdC\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Done Building Project "C:\Project Harmony\curl\CMakeFiles\3.22.3\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:05.25
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "C:/Project Harmony/curl/CMakeFiles/3.22.3/CompilerIdC/CompilerIdC.exe"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_45409.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CMakeCCompilerABI.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_45409.dir\Debug\\" /Fd"cmTC_45409.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCCompilerABI.c"
+  cmTC_45409.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_45409.exe
+
+
+
+Determining if the function getch exists in the ws2_32; passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_a86c1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getch /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a86c1.dir\Debug\\" /Fd"cmTC_a86c1.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CheckFunctionExists.c"
+  cmTC_a86c1.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_a86c1.exe
+
+
+
+Determining if the function getch exists in the winmm;ws2_32 passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f7b7a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getch /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f7b7a.dir\Debug\\" /Fd"cmTC_f7b7a.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CheckFunctionExists.c"
+  cmTC_f7b7a.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_f7b7a.exe
+
+
+
+Determining if the function cldap_open exists in the wldap32;winmm;ws2_32 passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_2615f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckFunctionExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=cldap_open /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2615f.dir\Debug\\" /Fd"cmTC_2615f.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.22\Modules\CheckFunctionExists.c"
+  cmTC_2615f.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_2615f.exe
+
+
+
+Determining if files ;windows.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c89ac.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_WINDOWS_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c89ac.dir\Debug\\" /Fd"cmTC_c89ac.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_WINDOWS_H.c"
+  cmTC_c89ac.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_c89ac.exe
+
+
+
+Determining if files windows.h;ws2tcpip.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_9a052.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_WS2TCPIP_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9a052.dir\Debug\\" /Fd"cmTC_9a052.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_WS2TCPIP_H.c"
+  cmTC_9a052.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_9a052.exe
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c4684.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_WINSOCK2_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c4684.dir\Debug\\" /Fd"cmTC_c4684.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_WINSOCK2_H.c"
+  cmTC_c4684.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_c4684.exe
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_74949.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_WINCRYPT_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_74949.dir\Debug\\" /Fd"cmTC_74949.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_WINCRYPT_H.c"
+  cmTC_74949.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_74949.exe
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_3dc2e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_STDIO_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3dc2e.dir\Debug\\" /Fd"cmTC_3dc2e.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_STDIO_H.c"
+  cmTC_3dc2e.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_3dc2e.exe
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_4fbb8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_ASSERT_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4fbb8.dir\Debug\\" /Fd"cmTC_4fbb8.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_ASSERT_H.c"
+  cmTC_4fbb8.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_4fbb8.exe
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5997f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_ERRNO_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5997f.dir\Debug\\" /Fd"cmTC_5997f.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_ERRNO_H.c"
+  cmTC_5997f.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_5997f.exe
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_e8087.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_LOCALE_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e8087.dir\Debug\\" /Fd"cmTC_e8087.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_LOCALE_H.c"
+  cmTC_e8087.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_e8087.exe
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_26e4c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_STDBOOL_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_26e4c.dir\Debug\\" /Fd"cmTC_26e4c.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_STDBOOL_H.c"
+  cmTC_26e4c.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_26e4c.exe
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdio.h;stdlib.h;string.h;time.h;process.h;stddef.h exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_66da2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  HAVE_STDDEF_H.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_66da2.dir\Debug\\" /Fd"cmTC_66da2.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckIncludeFiles\HAVE_STDDEF_H.c"
+  cmTC_66da2.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_66da2.exe
+
+
+
+Determining size of size_t passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_4597a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_SIZE_T.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4597a.dir\Debug\\" /Fd"cmTC_4597a.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF_SIZE_T.c"
+  cmTC_4597a.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_4597a.exe
+
+
+
+Determining size of long long passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_19a88.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_LONG_LONG.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_19a88.dir\Debug\\" /Fd"cmTC_19a88.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c"
+  cmTC_19a88.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_19a88.exe
+
+
+
+Determining size of long passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_3d4f5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_LONG.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3d4f5.dir\Debug\\" /Fd"cmTC_3d4f5.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c"
+  cmTC_3d4f5.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_3d4f5.exe
+
+
+
+Determining size of short passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_7726f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_SHORT.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7726f.dir\Debug\\" /Fd"cmTC_7726f.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF_SHORT.c"
+  cmTC_7726f.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_7726f.exe
+
+
+
+Determining size of int passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_bdb44.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_INT.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bdb44.dir\Debug\\" /Fd"cmTC_bdb44.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF_INT.c"
+  cmTC_bdb44.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_bdb44.exe
+
+
+
+Determining size of __int64 passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f91fd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF___INT64.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f91fd.dir\Debug\\" /Fd"cmTC_f91fd.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF___INT64.c"
+  cmTC_f91fd.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_f91fd.exe
+
+
+
+Determining size of time_t passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f1838.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_TIME_T.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f1838.dir\Debug\\" /Fd"cmTC_f1838.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF_TIME_T.c"
+  cmTC_f1838.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_f1838.exe
+
+
+
+Determining if the gethostbyname exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_774dd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_774dd.dir\Debug\\" /Fd"cmTC_774dd.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_774dd.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_774dd.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gethostbyname
+  return ((int*)(&gethostbyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strtoll exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5174b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5174b.dir\Debug\\" /Fd"cmTC_5174b.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_5174b.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_5174b.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoll
+  return ((int*)(&strtoll))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strtoi64 exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_8410f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8410f.dir\Debug\\" /Fd"cmTC_8410f.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_8410f.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_8410f.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strtoi64
+  return ((int*)(&_strtoi64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the freeaddrinfo exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_b1131.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b1131.dir\Debug\\" /Fd"cmTC_b1131.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_b1131.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_b1131.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef freeaddrinfo
+  return ((int*)(&freeaddrinfo))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getprotobyname exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_8a7d4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8a7d4.dir\Debug\\" /Fd"cmTC_8a7d4.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_8a7d4.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_8a7d4.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getprotobyname
+  return ((int*)(&getprotobyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getpeername exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_403f7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_403f7.dir\Debug\\" /Fd"cmTC_403f7.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_403f7.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_403f7.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpeername
+  return ((int*)(&getpeername))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getsockname exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ef258.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ef258.dir\Debug\\" /Fd"cmTC_ef258.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_ef258.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_ef258.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getsockname
+  return ((int*)(&getsockname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setlocale exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_8b51f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8b51f.dir\Debug\\" /Fd"cmTC_8b51f.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_8b51f.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_8b51f.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setlocale
+  return ((int*)(&setlocale))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setmode exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_0e819.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0e819.dir\Debug\\" /Fd"cmTC_0e819.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_0e819.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_0e819.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setmode
+  return ((int*)(&setmode))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setsockopt exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_d89bd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d89bd.dir\Debug\\" /Fd"cmTC_d89bd.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_d89bd.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_d89bd.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setsockopt
+  return ((int*)(&setsockopt))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the inet_pton exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_b7586.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b7586.dir\Debug\\" /Fd"cmTC_b7586.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_b7586.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_b7586.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_pton
+  return ((int*)(&inet_pton))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing Curl Test HAVE_IOCTLSOCKET passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_15089.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CurlTests.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_WINCRYPT_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_15089.dir\Debug\\" /Fd"cmTC_15089.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMake\CurlTests.c"
+C:\Project Harmony\curl\CMake\CurlTests.c(241): warning C4700: uninitialized local variable 'socket' used [C:\Project Harmony\curl\CMakeFiles\CMakeTmp\cmTC_15089.vcxproj]
+  cmTC_15089.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_15089.exe
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_801fd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CurlTests.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET_FIONBIO /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_WINCRYPT_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_801fd.dir\Debug\\" /Fd"cmTC_801fd.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMake\CurlTests.c"
+  cmTC_801fd.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_801fd.exe
+
+
+Performing Curl Test HAVE_BOOL_T passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_fff89.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CurlTests.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_BOOL_T /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_WINCRYPT_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fff89.dir\Debug\\" /Fd"cmTC_fff89.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMake\CurlTests.c"
+  cmTC_fff89.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_fff89.exe
+
+
+Performing Curl Test HAVE_VARIADIC_MACROS_C99 passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_609cf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CurlTests.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_VARIADIC_MACROS_C99 /D HAVE_WINDOWS_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_WINCRYPT_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_609cf.dir\Debug\\" /Fd"cmTC_609cf.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMake\CurlTests.c"
+  cmTC_609cf.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_609cf.exe
+
+
+Determining size of off_t passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_82b5a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_OFF_T.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_82b5a.dir\Debug\\" /Fd"cmTC_82b5a.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF_OFF_T.c"
+  cmTC_82b5a.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_82b5a.exe
+
+
+
+Determining size of curl_off_t passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f9b62.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_CURL_OFF_T.c
+  cl /c /I"C:\Project Harmony\curl\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f9b62.dir\Debug\\" /Fd"cmTC_f9b62.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF_CURL_OFF_T.c"
+  cmTC_f9b62.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_f9b62.exe
+
+
+
+Performing C SOURCE FILE Test curl_cv_recv succeeded with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_466f5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  src.c
+  cl /c /I"C:\Project Harmony\curl\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D curl_cv_recv /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_466f5.dir\Debug\\" /Fd"C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_466f5.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\src.c"
+  cmTC_466f5.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_466f5.lib
+
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+int main(void) {
+    recv(0, 0, 0, 0);
+    return 0;
+}
+Performing C SOURCE FILE Test curl_cv_func_recv_test succeeded with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c171b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  src.c
+  cl /c /I"C:\Project Harmony\curl\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D curl_cv_func_recv_test /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c171b.dir\Debug\\" /Fd"C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_c171b.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\src.c"
+  cmTC_c171b.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_c171b.lib
+
+
+Source file was:
+
+    #undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+    #ifdef WINSOCK_API_LINKAGE
+    WINSOCK_API_LINKAGE
+    #endif
+    extern int PASCAL
+    recv(SOCKET, char *, int, int);
+    int main(void) {
+      SOCKET s=0;
+      char * buf=0;
+      int len=0;
+      int flags=0;
+      int res = recv(s, buf, len, flags);
+      (void) res;
+      return 0;
+    }
+Performing C SOURCE FILE Test curl_cv_send succeeded with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_59c2c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  src.c
+  cl /c /I"C:\Project Harmony\curl\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D curl_cv_send /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_59c2c.dir\Debug\\" /Fd"C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_59c2c.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\src.c"
+  cmTC_59c2c.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_59c2c.lib
+
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+int main(void) {
+    send(0, 0, 0, 0);
+    return 0;
+}
+Performing C SOURCE FILE Test curl_cv_func_send_test succeeded with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_4dd11.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  src.c
+  cl /c /I"C:\Project Harmony\curl\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D curl_cv_func_send_test /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4dd11.dir\Debug\\" /Fd"C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_4dd11.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\src.c"
+  cmTC_4dd11.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_4dd11.lib
+
+
+Source file was:
+
+    #undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+    #ifdef WINSOCK_API_LINKAGE
+    WINSOCK_API_LINKAGE
+    #endif
+    extern int PASCAL
+    send(SOCKET, const char *, int, int);
+    int main(void) {
+      SOCKET s=0;
+      const char * buf=0;
+      int len=0;
+      int flags=0;
+      int res = send(s, buf, len, flags);
+      (void) res;
+      return 0;
+    }
+Performing C SOURCE FILE Test HAVE_STRUCT_TIMEVAL succeeded with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_16380.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  src.c
+  cl /c /I"C:\Project Harmony\curl\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D HAVE_STRUCT_TIMEVAL /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_16380.dir\Debug\\" /Fd"C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_16380.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\src.c"
+  cmTC_16380.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_16380.lib
+
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+int main(void) {
+  struct timeval ts;
+  ts.tv_sec  = 0;
+  ts.tv_usec = 0;
+  (void)ts;
+  return 0;
+}
+Determining size of struct sockaddr_storage passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_87d63.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  SIZEOF_STRUCT_SOCKADDR_STORAGE.c
+  cl /c /I"C:\Project Harmony\curl\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_87d63.dir\Debug\\" /Fd"C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_87d63.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CheckTypeSize\SIZEOF_STRUCT_SOCKADDR_STORAGE.c"
+  cmTC_87d63.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_87d63.lib
+
+
+
+Determining if the CryptAcquireContext exist passed with the following output:
+Change Dir: C:/Project Harmony/curl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_b7998.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30141 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /I"C:\Project Harmony\curl\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0600 /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b7998.dir\Debug\\" /Fd"cmTC_b7998.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Project Harmony\curl\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  cmTC_b7998.vcxproj -> C:\Project Harmony\curl\CMakeFiles\CMakeTmp\Debug\cmTC_b7998.exe
+
+
+File C:/Project Harmony/curl/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CryptAcquireContext
+  return ((int*)(&CryptAcquireContext))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+C:/Project Harmony/curl/lib/CMakeLists.txt
+C:/Project Harmony/curl/lib/Makefile.inc
+C:/Project Harmony/curl/lib/Makefile.inc.cmake
+C:/Project Harmony/curl/lib/curl_config.h.cmake

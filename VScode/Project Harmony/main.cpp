@@ -17,8 +17,9 @@
 //#include "time.h"
 //#include "math.h"
 
+#include <curl/curl.h>
+
 #include <fstream>
-#include <iostream>
 #include <chrono>
 #include <thread>
 
@@ -28,10 +29,14 @@ using namespace Basler_UniversalCameraParams;
 
 #pragma comment(lib,"ws2_32.lib") //Winsock Library
 
+APIHandle_t handle;
+
 string str_images_path = "C:\\harmony_images\\";
 string str_html_path = "C:\\Project Harmony\\index.htm";
+string str_object_list_json_path = "C:\\Project Harmony\\object_list.json";
 
-APIHandle_t handle;
+string str_anpr_url = "http://172.16.15.171/api/ImageAPI/UploadFiles/";
+//string str_anpr_url = "http://3.111.11.186:5001/api/upload_event";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -123,18 +128,18 @@ void aca2440_setup()
 	}
 }
 
-void aca2440_grab_image(string str_speed)
+string aca2440_grab_image(string str_speed, string str_time_stamp_as_name)
 {
 	try
 	{
-		time_t raw_time;
+		/*time_t raw_time;
 		struct tm* time_info;
 		char char_time_stamp[80];
 
 		time(&raw_time);
 		time_info = localtime(&raw_time);
 		strftime(char_time_stamp, 80, "%G.%m.%d_%H.%M.%S", time_info);
-		string str_time_stamp_as_name(char_time_stamp);
+		string str_time_stamp_as_name(char_time_stamp);*/
 
 		string str_images_folder = str_time_stamp_as_name.substr(0, str_time_stamp_as_name.find('_'));
 		str_time_stamp_as_name = str_time_stamp_as_name + "_" + str_speed;
@@ -160,14 +165,15 @@ void aca2440_grab_image(string str_speed)
 				cout << "Before : " << dt << endl;*/
 
 				string str_image_path = str_output_path + "\\" + str_time_stamp_as_name + ".png";
-				char* char_ptr_image_path = &str_image_path[0];
 
-				cout << "Taking SS" << endl;
-				CImagePersistence::Save(ImageFileFormat_Png, char_ptr_image_path, ptrGrabResult);
+				//cout << "Taking SS" << endl;
+				CImagePersistence::Save(ImageFileFormat_Png, str_image_path.c_str(), ptrGrabResult);
 				cout << "SS saved to : " << str_image_path << endl;
 				cout << "Gain : " << camera.Gain.GetValue() << endl;
 				cout << "Exposure : " << camera.ExposureTime.GetValue() << endl;
 				camera.Close();
+
+				return str_image_path;
 
 				/*now = time(0);
 				dt = ctime(&now);
@@ -475,7 +481,41 @@ int isys5220_get_obj_list(object_list object[256])
 	}
 }
 
+void create_object_list_json(object_list object, string str_time_stamp_as_name)
+{
+	ofstream outfile;
+	outfile.open(str_object_list_json_path);
 
+	if (!outfile)
+	{
+		cout << "File not found !" << endl;
+		//break;
+	}
+
+	outfile << "{" << endl;
+	outfile << "\"image_name\": " << str_time_stamp_as_name << "," << endl;
+	outfile << "\"object_id\": " << object.i_object_id << "," << endl;
+	outfile << "\"age_count\": " << object.i_age_count << "," << endl;
+	outfile << "\"statis_count\": " << object.i_static_count << "," << endl;
+	outfile << "\"track_quality\": " << object.f_track_quality << "," << endl;
+	outfile << "\"object_class\": " << object.i_object_class << "," << endl;
+	outfile << "\"event_zone_index\": " << object.i_event_zone_index << "," << endl;
+	outfile << "\"distance_x\": " << object.f_distance_x << "," << endl;
+	outfile << "\"distance_y\": " << object.f_distance_y << "," << endl;
+	outfile << "\"velocity_x\": " << object.f_velocity_x << "," << endl;
+	outfile << "\"velocity_y\": " << object.f_velocity_y << "," << endl;
+	outfile << "\"velocity_in_direction\": " << object.f_velocity_in_dir << "," << endl;
+	outfile << "\"direction_x\": " << object.f_direction_x << "," << endl;
+	outfile << "\"direction_y\": " << object.f_direction_y << "," << endl;
+	outfile << "\"distance_to_front\": " << object.f_distance_to_front << "," << endl;
+	outfile << "\"distance_to_back\": " << object.f_distance_to_back << "," << endl;
+	outfile << "\"length_of_object\": " << object.f_length << "," << endl;
+	outfile << "\"width_of_object\": " << object.f_width << endl;
+	outfile << "}" << endl;
+
+
+	outfile.close();
+}
 
 int main()//int argc, char* argv[])
 {
@@ -507,7 +547,9 @@ int main()//int argc, char* argv[])
 	object_list object[256]; // max 512
 	int i_no_of_objects = 0;
 
-	ofstream outfile;
+	CURL* curl;
+	CURLcode result;
+
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// iSYS5220 INIT
@@ -539,7 +581,8 @@ int main()//int argc, char* argv[])
 
 	PylonInitialize();
 	aca2440_setup();
-	aca2440_grab_image("test");
+	//aca2440_grab_image("test");
+
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// SQL INITIALIZATION
@@ -554,13 +597,26 @@ int main()//int argc, char* argv[])
 		fprintf(stderr, "Opened database successfully\n");
 	}
 
-	sql_query = "CREATE TABLE if NOT EXISTS MOTION_ZONE("\
-		"TIME_STAMP      TEXT		NOT NULL,"\
-		"ZONE_NUMBER     INT		NOT NULL,"\
-		"SPEED           INT		NOT NULL,"\
-		"CLASS           INT		NOT NULL,"\
-		"DIRECTION       INT		NOT NULL,"\
-		"OBJECT_ID       INT		NOT_NULL);";
+	sql_query = "CREATE TABLE if NOT EXISTS OBJECT_LIST("\
+		"TIME_STAMP				TEXT	NOT NULL,"\
+		"IMAGE_NAME				TEXT	NOT NULL,"\
+		"OBJECT_ID				INT		NOT NULL,"\
+		"AGE_COUNT				INT		NOT NULL,"\
+		"STATIC_COUNT			INT		NOT NULL,"\
+		"TRACK_QUALITY			FLOAT	NOT NULL,"\
+		"OBJECT_CLASS			FLOAT	NOT NULL,"\
+		"EVENT_ZONE_INDEX		FLOAT	NOT NULL,"\
+		"DISTANCE_X				FLOAT	NOT NULL,"\
+		"DISTANCE_Y				FLOAT	NOT NULL,"\
+		"VELOCITY_X				FLAOT	NOT NULL,"\
+		"VELOCITY_Y				FLOAT	NOT NULL,"\
+		"VELOCITY_IN_DIRECTON	FLOAT	NOT NULL,"\
+		"DIRECTION_X			FLOAT	NOT NULL,"\
+		"DIRECTION_Y			FLOAT	NOT NULL,"\
+		"DISTANCE_TO_FRONT		FLOAT	NOT NULL,"\
+		"DISTANCE_TO_BACK		FLOAT	NOT NULL,"\
+		"LENGTH_OF_OBJECT		FLOAT	NOT NULL,"\
+		"WIDTH_OF_OBJECT		FLOAT	NOT_NULL);";
 
 	sql_rc = sqlite3_exec(sql_db, sql_query, callback, 0, &sql_z_err_msg);
 
@@ -574,9 +630,11 @@ int main()//int argc, char* argv[])
 
 	sqlite3_close(sql_db);
 
+
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// CURL INITIALIZATION
 
-
+	curl_global_init(CURL_GLOBAL_DEFAULT);
 
 	//Receive a reply from the server
 	while (1)
@@ -710,7 +768,7 @@ int main()//int argc, char* argv[])
 		//cout << "No. of objects : " << i_no_of_objects << endl;
 		for (int i = 0; i < i_no_of_objects; i++)
 		{
-			cout << "i_object_id : " << object[i].i_object_id << endl;
+			/*cout << "i_object_id : " << object[i].i_object_id << endl;
 			cout << "i_age_count : " << object[i].i_age_count << endl;
 			cout << "i_static_count : " << object[i].i_static_count << endl;
 			cout << "f_track_quality : " << object[i].f_track_quality << endl;
@@ -727,45 +785,163 @@ int main()//int argc, char* argv[])
 			cout << "f_distance_to_back : " << object[i].f_distance_to_back << endl;
 			cout << "f_length : " << object[i].f_length << endl;
 			cout << "f_width : " << object[i].f_width << endl;
-			printf("\n");
+			printf("\n");*/
 
 			if (object[i].i_event_zone_index == 0 && object[i].f_distance_y < 25 && (object[i].f_velocity_in_dir * 3.6) > 10)
 			{
-				aca2440_grab_image(to_string(object[i].f_velocity_in_dir * 3.6));
+				time_t raw_time;
+				struct tm* time_info;
+				char char_time_stamp[80];
+
+				time(&raw_time);
+				time_info = localtime(&raw_time);
+				strftime(char_time_stamp, 80, "%G.%m.%d_%H.%M.%S", time_info);
+				string str_time_stamp_as_name(char_time_stamp);
+
+				strftime(char_time_stamp, 80, "'%G-%m-%d %H:%M:%S'", time_info);
+				string str_time_stamp(char_time_stamp);
+
+				string str_image_path = aca2440_grab_image(to_string(object[i].f_velocity_in_dir * 3.6), str_time_stamp_as_name);
+
+				sql_rc = sqlite3_open("harmony.db", &sql_db);
+
+				if (sql_rc) {
+					fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(sql_db));
+					return(0);
+				}
+				else {
+					fprintf(stderr, "Opened database successfully\n");
+				}
+
+				str_time_stamp_as_name.insert(0, "'");
+				str_time_stamp_as_name.append("'");
+
+				string temp_query = "INSERT INTO OBJECT_LIST (TIME_STAMP,\
+															IMAGE_NAME,\
+															OBJECT_ID,\
+															AGE_COUNT,\
+															STATIC_COUNT,\
+															TRACK_QUALITY,\
+															OBJECT_CLASS,\
+															EVENT_ZONE_INDEX,\
+															DISTANCE_X,\
+															DISTANCE_Y,\
+															VELOCITY_X,\
+															VELOCITY_Y,\
+															VELOCITY_IN_DIRECTON,\
+															DIRECTION_X,\
+															DIRECTION_Y,\
+															DISTANCE_TO_FRONT,\
+															DISTANCE_TO_BACK,\
+															LENGTH_OF_OBJECT,\
+															WIDTH_OF_OBJECT)"
+									"VALUES (" + str_time_stamp + ","
+												+ str_time_stamp_as_name + ","
+												+ to_string(object[i].i_object_id) + ","
+												+ to_string(object[i].i_age_count) + "," 
+												+ to_string(object[i].i_static_count) + ","
+												+ to_string(object[i].f_track_quality) + ","
+												+ to_string(object[i].i_object_class) + ","
+												+ to_string(object[i].i_event_zone_index) + ","
+												+ to_string(object[i].f_distance_x) + ","
+												+ to_string(object[i].f_distance_y) + ","
+												+ to_string(object[i].f_velocity_x) + ","
+												+ to_string(object[i].f_velocity_y) + ","
+												+ to_string(object[i].f_velocity_in_dir) + ","
+												+ to_string(object[i].f_direction_x) + ","
+												+ to_string(object[i].f_direction_y) + ","
+												+ to_string(object[i].f_distance_to_front) + ","
+												+ to_string(object[i].f_distance_to_back) + ","
+												+ to_string(object[i].f_length) + ","
+												+ to_string(object[i].f_width)
+												+ ");";
+
+				sql_query = &temp_query[0];
+
+				sql_rc = sqlite3_exec(sql_db, sql_query, callback, 0, &sql_z_err_msg);
+
+				if (sql_rc != SQLITE_OK) {
+					fprintf(stderr, "SQL error: %s\n", sql_z_err_msg);
+					sqlite3_free(sql_z_err_msg);
+				}
+				else {
+					fprintf(stdout, "Records created successfully\n");
+				}
+
+				sqlite3_close(sql_db);
+
+				create_object_list_json(object[i], str_time_stamp_as_name);
+
+				curl = curl_easy_init();
+				if (curl) {
+
+					// Set URL
+					//curl_easy_setopt(curl, CURLOPT_URL, "http://www.example.com/");
+					//curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "POST");
+					curl_easy_setopt(curl, CURLOPT_URL, str_anpr_url.c_str());
+					/*curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+					curl_easy_setopt(curl, CURLOPT_DEFAULT_PROTOCOL, "https");
+					struct curl_slist* headers = NULL;
+					curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);*/
+					curl_mime* mime;
+					curl_mimepart* part;
+					mime = curl_mime_init(curl);
+					part = curl_mime_addpart(mime);
+					curl_mime_name(part, "file");
+					curl_mime_filedata(part, str_image_path.c_str());
+					part = curl_mime_addpart(mime);
+					curl_mime_name(part, "file");
+					curl_mime_filedata(part, str_object_list_json_path.c_str());
+					curl_easy_setopt(curl, CURLOPT_MIMEPOST, mime);
+					// If you want to set any more options, do it here, before making the request.
+
+					// Perform the request which prints to stdout
+					result = curl_easy_perform(curl);
+
+					// Error check
+					if (result != CURLE_OK) {
+						std::cerr << "Error during curl request: "
+							<< curl_easy_strerror(result) << std::endl;
+					}
+					else
+						cout << "post to server successful" << endl;
+
+					curl_mime_free(mime);
+					curl_easy_cleanup(curl);
+				}
+				else {
+					std::cerr << "Error initializing curl." << std::endl;
+				}
 			}
 
-			outfile.open(str_html_path);
+			//outfile.open(str_html_path);
 
-			if (!outfile)
-			{
-				cout << "File not found !" << endl;
-				//break;
-			}
+			//if (!outfile)
+			//{
+			//	cout << "File not found !" << endl;
+			//	//break;
+			//}
 
-			outfile << "<!DOCTYPE html>" << endl;
-			outfile << "<html>" << endl;
-			outfile << "<head>" << endl;
-			outfile << "<meta http-equiv=\"refresh\" content=\"0.2\">" << endl;
-			outfile << "</head>" << endl;
-			outfile << "<body>" << endl;
-			outfile << "<p7>&nbsp&nbsp&nbsp" << (int)(object[i].f_velocity_in_dir * 3.6) << "<br></p7>" << endl;
-			outfile << "<p7>KMPH</p7>" << endl;
-			outfile << "</body>" << endl;
-			outfile << "</html>" << endl;
+			//outfile << "<!DOCTYPE html>" << endl;
+			//outfile << "<html>" << endl;
+			//outfile << "<head>" << endl;
+			//outfile << "<meta http-equiv=\"refresh\" content=\"0.2\">" << endl;
+			//outfile << "</head>" << endl;
+			//outfile << "<body>" << endl;
+			//outfile << "<p7>&nbsp&nbsp&nbsp" << (int)(object[i].f_velocity_in_dir * 3.6) << "<br></p7>" << endl;
+			//outfile << "<p7>KMPH</p7>" << endl;
+			//outfile << "</body>" << endl;
+			//outfile << "</html>" << endl;
 
-			outfile.close();
+			//outfile.close();
 
-			this_thread::sleep_for(std::chrono::milliseconds(200));
+			//this_thread::sleep_for(std::chrono::milliseconds(200));
 
 		}
 		//printf("***********************end***************************\n");
 		//printf("\n");
 
 	}
-
-
-
-
 
 	closesocket(s);
 	WSACleanup();

@@ -1,0 +1,20 @@
+{
+"image_name": '2022.04.13_00.02.53',
+"object_id": 392,
+"age_count": 81,
+"statis_count": 6000,
+"track_quality": 75.3221,
+"object_class": 30,
+"event_zone_index": 0,
+"distance_x": -0.30701,
+"distance_y": 24.9679,
+"velocity_x": 0.789338,
+"velocity_y": -5.15393,
+"velocity_in_direction": 5.21402,
+"direction_x": 0.151388,
+"direction_y": -0.988474,
+"distance_to_front": 1.6047,
+"distance_to_back": -2.7754,
+"length_of_object": 4.60098,
+"width_of_object": 2.5
+}

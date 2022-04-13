@@ -1,11 +1,12 @@
 ﻿  main.cpp
-C:\Project Harmony\main.cpp(430,22): warning C4018: '<': signed/unsigned mismatch
-C:\Project Harmony\main.cpp(490,6): warning C4101: 'iResult': unreferenced local variable
-C:\Project Harmony\main.cpp(489,6): warning C4101: 'recv_size': unreferenced local variable
-C:\Project Harmony\main.cpp(488,7): warning C4101: 'server_reply': unreferenced local variable
-C:\Project Harmony\main.cpp(504,13): warning C4101: 'time_info': unreferenced local variable
-C:\Project Harmony\main.cpp(505,7): warning C4101: 'char_time_stamp': unreferenced local variable
-C:\Project Harmony\main.cpp(503,9): warning C4101: 'raw_time': unreferenced local variable
-C:\Project Harmony\main.cpp(476): warning C4715: 'isys5220_get_obj_list': not all control paths return a value
-C:\Project Harmony\main.cpp(412): warning C4715: 'isys5220_setup': not all control paths return a value
+C:\Project Harmony\main.cpp(436,22): warning C4018: '<': signed/unsigned mismatch
+C:\Project Harmony\main.cpp(530,6): warning C4101: 'iResult': unreferenced local variable
+C:\Project Harmony\main.cpp(529,6): warning C4101: 'recv_size': unreferenced local variable
+C:\Project Harmony\main.cpp(528,7): warning C4101: 'server_reply': unreferenced local variable
+C:\Project Harmony\main.cpp(544,13): warning C4101: 'time_info': unreferenced local variable
+C:\Project Harmony\main.cpp(545,7): warning C4101: 'char_time_stamp': unreferenced local variable
+C:\Project Harmony\main.cpp(543,9): warning C4101: 'raw_time': unreferenced local variable
+C:\Project Harmony\main.cpp(418): warning C4715: 'isys5220_setup': not all control paths return a value
+C:\Project Harmony\main.cpp(193): warning C4715: 'aca2440_grab_image': not all control paths return a value
+C:\Project Harmony\main.cpp(482): warning C4715: 'isys5220_get_obj_list': not all control paths return a value
   Project Harmony.vcxproj -> C:\Project Harmony\x64\Debug\Project Harmony.exe

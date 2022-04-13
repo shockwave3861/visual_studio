@@ -1,0 +1,8 @@
+C:/Project Harmony/curl/CMakeFiles/uninstall.dir
+C:/Project Harmony/curl/CMakeFiles/INSTALL.dir
+C:/Project Harmony/curl/CMakeFiles/ALL_BUILD.dir
+C:/Project Harmony/curl/CMakeFiles/ZERO_CHECK.dir
+C:/Project Harmony/curl/lib/CMakeFiles/libcurl.dir
+C:/Project Harmony/curl/lib/CMakeFiles/INSTALL.dir
+C:/Project Harmony/curl/src/CMakeFiles/curl.dir
+C:/Project Harmony/curl/src/CMakeFiles/INSTALL.dir
