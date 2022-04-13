@@ -1,6 +1,11 @@
 ﻿  main.cpp
-C:\Users\kelai\Documents\Project Harmony\main.cpp(117,11): warning C4101: 'sql_db': unreferenced local variable
-C:\Users\kelai\Documents\Project Harmony\main.cpp(118,6): warning C4101: 'sql_rc': unreferenced local variable
-C:\Users\kelai\Documents\Project Harmony\main.cpp(120,8): warning C4101: 'sql_z_err_msg': unreferenced local variable
-C:\Users\kelai\Documents\Project Harmony\main.cpp(119,14): warning C4101: 'sql_query': unreferenced local variable
-  Project Harmony.vcxproj -> C:\Users\kelai\Documents\Project Harmony\x64\Debug\Project Harmony.exe
+C:\Project Harmony\main.cpp(430,22): warning C4018: '<': signed/unsigned mismatch
+C:\Project Harmony\main.cpp(490,6): warning C4101: 'iResult': unreferenced local variable
+C:\Project Harmony\main.cpp(489,6): warning C4101: 'recv_size': unreferenced local variable
+C:\Project Harmony\main.cpp(488,7): warning C4101: 'server_reply': unreferenced local variable
+C:\Project Harmony\main.cpp(504,13): warning C4101: 'time_info': unreferenced local variable
+C:\Project Harmony\main.cpp(505,7): warning C4101: 'char_time_stamp': unreferenced local variable
+C:\Project Harmony\main.cpp(503,9): warning C4101: 'raw_time': unreferenced local variable
+C:\Project Harmony\main.cpp(476): warning C4715: 'isys5220_get_obj_list': not all control paths return a value
+C:\Project Harmony\main.cpp(412): warning C4715: 'isys5220_setup': not all control paths return a value
+  Project Harmony.vcxproj -> C:\Project Harmony\x64\Debug\Project Harmony.exe

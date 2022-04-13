@@ -58,11 +58,11 @@ int main(int argc, char* argv[]) {
 	string time_stamp = "2020.02.01_17.24.30";
 	time_stamp.insert(0, "'");
 	time_stamp.append("'");
-	string zone_number = "03";
-	string speed = "30";
-	string object_class = "30";
-	string direction = "02";
-	string object_id = "99";
+	int zone_number = 1;
+	float speed = 30.6;
+	int object_class = 30;
+	int direction = 02;
+	int object_id = 99;
 	
 	sql = /*"SELECT OBJECT_ID FROM OBJECT_DETAILS;"\*/
 		"DELETE FROM OBJECT_DETAILS WHERE OBJECT_ID=99;";
@@ -79,7 +79,7 @@ int main(int argc, char* argv[]) {
 
 
 	string all = "INSERT INTO OBJECT_DETAILS (TIME_STAMP,ZONE_NUMBER,SPEED,CLASS,DIRECTION,OBJECT_ID)"
-		"VALUES (" + time_stamp + "," + zone_number + "," + speed + "," + object_class + "," + direction + "," + object_id + ");";
+		"VALUES (" + time_stamp + "," + to_string(zone_number) + "," + to_string(speed) + "," + to_string(object_class) + "," + to_string(direction) + "," + to_string(object_id) + ");";
 
 	sql = &all[0];
 

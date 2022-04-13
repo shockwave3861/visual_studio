@@ -19,4 +19,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\iSYS5220_radarAPI_basicTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iSYS5220_radarAPI_enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iSYS5220_radarAPI_if.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iSYS5220_radarAPI_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\x64\iSYS5220_radarAPI.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\x64\iSYS5220_radarAPI.dll" />
+  </ItemGroup>
 </Project>

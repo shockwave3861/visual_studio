@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -122,6 +122,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\sqlite3;$(SolutionDir)\lib\x64;$(PYLON_LINK64);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)\lib\x64\iSYS5220_radarAPI.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,6 +143,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\iSYS5220_radarAPI_basicTypes.h" />
+    <ClInclude Include="include\iSYS5220_radarAPI_enums.h" />
+    <ClInclude Include="include\iSYS5220_radarAPI_if.h" />
+    <ClInclude Include="include\iSYS5220_radarAPI_structs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\x64\iSYS5220_radarAPI.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\x64\iSYS5220_radarAPI.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
